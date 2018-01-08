@@ -18,8 +18,6 @@ const adminRoutes = require('./routes/adminRoutes')
 app.use('/admin', adminRoutes)
 
 
-
-
 app.use((req, res) => {
   const status = 404;
   const message = `Could not ${req.method} ${req.path}`
