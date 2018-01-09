@@ -4,10 +4,10 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('name').notNullable();
     table.string('email').notNullable();
-    table.string('password').notNullable();
     table.enum('team', ['red', 'blue', 'yellow']).defaultTo(null);
     table.integer('level').notNullable().defaultTo(1);
     table.enum('role', [ 'admin', 'user' ]).notNullable() .defaultTo('user')
+    table.integer('flake').defaultTo(null)
   })
 };
 

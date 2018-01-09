@@ -11,7 +11,6 @@ class userModel{
       .then(emailMatch => {
         return emailMatch ? true : false
       })
-      .catch(err => console.log(err))
   }
   static signUp(data){
     return db.insert({data})
