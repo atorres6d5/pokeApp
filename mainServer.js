@@ -13,7 +13,7 @@ app.use(cors())
 const userRoutes = require('./routes/userRoutes')
 app.use('/user', userRoutes)
 
-/// admin user aoutes
+/// admin Routes
 const adminRoutes = require('./routes/adminRoutes')
 app.use('/admin', adminRoutes)
 
