@@ -10,8 +10,7 @@ constructor(){}
       })
   }
   static signUp(data){
-    console.log(data);
-    return db('users').insert(data)
+    return db('users').returning('*').insert(data)
   }
   static getUserIdByEmail (email) {
     return db('users')
@@ -20,7 +19,14 @@ constructor(){}
     .first()
   }
   static getUserById(id){
-    return db('users').where('id',id).first()
+    return db('users').returning('*').where('id',id).first()
+  }
+  static editUserById(id, data){
+    return db('users').where('id', id)
+    .update(data)
+  }
+  static deleteUserById(id){
+    return db('users').where('id', id).del()
   }
 }
 
