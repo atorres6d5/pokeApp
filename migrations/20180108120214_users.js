@@ -7,7 +7,7 @@ exports.up = function(knex, Promise) {
     table.enum('team', ['red', 'blue', 'yellow']).defaultTo(null);
     table.integer('level').notNullable().defaultTo(1);
     table.enum('role', [ 'admin', 'user' ]).notNullable() .defaultTo('user')
-    table.integer('flake').defaultTo(null)
+    table.integer('flakes').defaultTo(null)
   })
 };
 
