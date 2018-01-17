@@ -9,8 +9,7 @@ router.post('/signup', userCtrl.verifySignUp, userCtrl.signUp)
 router.get('/profile/:id', userCtrl.getUserById)
 router.put('/profile/:id', userCtrl.editUserById)
 router.delete('/profile/:id', userCtrl.deleteUserById)
-
-// router.post('/new/raidGroup', userCtrl.verifyRaid)
+router.post('/new/raidGroup', userCtrl.verifyRaid)
 
 
 module.exports = router
